@@ -5,7 +5,7 @@ dotenv.config();
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 7777;
 
 const token = process.env.TELEGRAM_TOKEN;
 
@@ -44,5 +44,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 7777");
 });
