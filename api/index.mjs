@@ -5,6 +5,8 @@ dotenv.config();
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const token = process.env.TELEGRAM_TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
@@ -35,4 +37,12 @@ bot.on("message", (msg) => {
       "You have chosen Dispute Resolution. Provide the username of the involved party."
     );
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log("Server is running on port 3000");
 });
