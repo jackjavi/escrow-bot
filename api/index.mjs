@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 7777;
 
 // Telegram bot token
-const token = `7386678640:AAFVAduijrBqHUWBOIEUzRDDNaxuDLb6XKQ`;
+const token = `xxxxxxxxx`;
 
 // Create a new Telegram bot using long polling
 const bot = new TelegramBot(token, { polling: true });
