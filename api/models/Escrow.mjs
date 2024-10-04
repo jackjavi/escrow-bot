@@ -16,6 +16,9 @@ const escrowSchema = new mongoose.Schema({
   },
   type: { type: String, required: true }, // Escrow or Dispute Resolution or Wallet or Information or Intasef.com or Language
   status: { type: String, default: "pending" }, // Status of the transaction
+  itemName: { type: String, required: false },
+  amount: { type: Number, required: false },
+  paymentMethod: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
